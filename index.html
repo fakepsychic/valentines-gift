@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #ffc0cb);
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 80%;
+        }
+        .question {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #ff4b6a;
+        }
+        #answer {
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 2px solid #ff4b6a;
+            border-radius: 5px;
+            width: 200px;
+        }
+        #submitBtn {
+            padding: 10px 30px;
+            background: #ff4b6a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+        #submitBtn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">What's my favorite color?</div>
+        <input type="text" id="answer" placeholder="Your answer...">
+        <button id="submitBtn">Submit</button>
+    </div>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const answer = document.getElementById('answer').value.toLowerCase();
+            if(answer === 'blue') { // Change this to your desired answer
+                window.location.href = 'page2.html';
+            } else {
+                alert('Try again! ❤️');
+            }
+        });
+    </script>
+</body>
+</html>
